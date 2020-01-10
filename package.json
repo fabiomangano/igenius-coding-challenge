@@ -4,8 +4,8 @@
   "description": "A small backend for an online currency converter.",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "docker-compose up"
+    "test": "docker-compose -f docker-compose.yml -f docker/docker-compose.test.yml up --build",
+    "start": "docker-compose -f docker-compose.yml -f docker/docker-compose.dev.yml up --build"
   },
   "repository": {
     "type": "git",
@@ -32,11 +32,9 @@
   "devDependencies": {
     "babel-eslint": "10.0.3",
     "chai": "4.2.0",
-    "chai-http": "4.3.0",
     "eslint": "6.6.0",
     "eslint-config-strongloop": "2.1.0",
     "mocha": "6.2.2",
-    "nodemon": "2.0.2",
-    "nyc": "14.1.1"
+    "nodemon": "2.0.2"
   }
 }
