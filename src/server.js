@@ -1,5 +1,5 @@
 const { createApp } = require('./createApp');
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 (async () => {
   const app = await createApp();
