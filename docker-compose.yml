@@ -4,26 +4,15 @@ services:
     container_name: server
     build:
       context: .
-      dockerfile: ./docker/dockerfile
     ports:
       - 3000:3000  
-    volumes:
-      - ./:/app
-      - app/node_modules
     depends_on:
-      - postgres  
-    environment:
-      DATABASE_URL: postgres://postgres:postgres@postgres:5432/db
-      PORT: 3000  
+      - postgres   
   postgres:
     container_name: postgres
     image: postgres:12.1-alpine
     ports:
       - 5000:5432
-    environment:
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: postgres
-      POSTGRES_DB: db
     logging:
       driver: none 
 
