@@ -1,0 +1,42 @@
+{
+  "name": "igenius-project",
+  "version": "1.0.0",
+  "description": "A small backend for an online currency converter.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "docker-compose up"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fabiomangano/igenius-project.git"
+  },
+  "author": "Fabio Mangano",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fabiomangano/igenius-project/issues"
+  },
+  "homepage": "https://github.com/fabiomangano/igenius-project#readme",
+  "dependencies": {
+    "accounting": "^0.4.1",
+    "axios": "^0.19.0",
+    "express": "^4.17.1",
+    "express-validator": "^6.3.1",
+    "money": "^0.2.0",
+    "pg": "^7.17.0",
+    "pg-hstore": "^2.3.3",
+    "sequelize": "^5.21.3",
+    "uuid": "^3.3.3",
+    "xml2js": "^0.4.23"
+  },
+  "devDependencies": {
+    "babel-eslint": "10.0.3",
+    "chai": "4.2.0",
+    "chai-http": "4.3.0",
+    "eslint": "6.6.0",
+    "eslint-config-strongloop": "2.1.0",
+    "mocha": "6.2.2",
+    "nodemon": "^2.0.2",
+    "nyc": "14.1.1"
+  }
+}
