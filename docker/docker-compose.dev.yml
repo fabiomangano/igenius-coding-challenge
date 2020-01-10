@@ -1,0 +1,19 @@
+version: '3'
+services:
+  server:
+    container_name: server
+    build:
+      context: .
+      dockerfile: ./docker/dockerfile.dev
+    volumes:
+      - ./:/app
+      - app/node_modules  
+    environment:
+      DATABASE_URL: postgres://postgres:postgres@postgres:5432/db_dev
+      PORT: 3000  
+  postgres:
+    container_name: postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: db_dev
